@@ -1,0 +1,86 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<hudson>
+  <disabledAdministrativeMonitors>
+    <string>hudsonHomeIsFull</string>
+    <string>jenkins.diagnostics.ControllerExecutorsNoAgents</string>
+    <string>jenkins.security.QueueItemAuthenticatorMonitor</string>
+    <string>jenkins.diagnostics.ControllerExecutorsAgents</string>
+  </disabledAdministrativeMonitors>
+  <version>2.287</version>
+  <numExecutors>2</numExecutors>
+  <mode>NORMAL</mode>
+  <useSecurity>true</useSecurity>
+  <authorizationStrategy class="hudson.security.ProjectMatrixAuthorizationStrategy">
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Create:varia</permission>
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Delete:varia</permission>
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.ManageDomains:varia</permission>
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Update:varia</permission>
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.View:varia</permission>
+    <permission>hudson.model.Computer.Build:alice</permission>
+    <permission>hudson.model.Computer.Build:varia</permission>
+    <permission>hudson.model.Computer.Configure:varia</permission>
+    <permission>hudson.model.Computer.Connect:varia</permission>
+    <permission>hudson.model.Computer.Create:varia</permission>
+    <permission>hudson.model.Computer.Delete:varia</permission>
+    <permission>hudson.model.Computer.Disconnect:varia</permission>
+    <permission>hudson.model.Hudson.Administer:varia</permission>
+    <permission>hudson.model.Hudson.Read:alice</permission>
+    <permission>hudson.model.Hudson.Read:varia</permission>
+    <permission>hudson.model.Item.Build:alice</permission>
+    <permission>hudson.model.Item.Build:varia</permission>
+    <permission>hudson.model.Item.Cancel:varia</permission>
+    <permission>hudson.model.Item.Configure:varia</permission>
+    <permission>hudson.model.Item.Create:varia</permission>
+    <permission>hudson.model.Item.Delete:varia</permission>
+    <permission>hudson.model.Item.Discover:varia</permission>
+    <permission>hudson.model.Item.Move:varia</permission>
+    <permission>hudson.model.Item.Read:alice</permission>
+    <permission>hudson.model.Item.Read:varia</permission>
+    <permission>hudson.model.Item.Workspace:varia</permission>
+    <permission>hudson.model.Run.Delete:varia</permission>
+    <permission>hudson.model.Run.Replay:varia</permission>
+    <permission>hudson.model.Run.Update:varia</permission>
+    <permission>hudson.model.View.Configure:varia</permission>
+    <permission>hudson.model.View.Create:varia</permission>
+    <permission>hudson.model.View.Delete:varia</permission>
+    <permission>hudson.model.View.Read:alice</permission>
+    <permission>hudson.model.View.Read:varia</permission>
+    <permission>hudson.plugins.jobConfigHistory.JobConfigHistory.DeleteEntry:varia</permission>
+    <permission>hudson.scm.SCM.Tag:varia</permission>
+    <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.Reserve:varia</permission>
+    <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.Unlock:varia</permission>
+    <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.View:varia</permission>
+  </authorizationStrategy>
+  <securityRealm class="hudson.security.HudsonPrivateSecurityRealm">
+    <disableSignup>true</disableSignup>
+    <enableCaptcha>false</enableCaptcha>
+  </securityRealm>
+  <disableRememberMe>false</disableRememberMe>
+  <projectNamingStrategy class="jenkins.model.ProjectNamingStrategy$DefaultProjectNamingStrategy"/>
+  <workspaceDir>${JENKINS_HOME}/workspace/${ITEM_FULL_NAME}</workspaceDir>
+  <buildsDir>${ITEM_ROOTDIR}/builds</buildsDir>
+  <markupFormatter class="hudson.markup.EscapedMarkupFormatter"/>
+  <jdks/>
+  <viewsTabBar class="hudson.views.DefaultViewsTabBar"/>
+  <myViewsTabBar class="hudson.views.DefaultMyViewsTabBar"/>
+  <clouds/>
+  <quietPeriod>5</quietPeriod>
+  <scmCheckoutRetryCount>0</scmCheckoutRetryCount>
+  <views>
+    <hudson.model.AllView>
+      <owner class="hudson" reference="../../.."/>
+      <name>all</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+    </hudson.model.AllView>
+  </views>
+  <primaryView>all</primaryView>
+  <slaveAgentPort>50000</slaveAgentPort>
+  <label></label>
+  <crumbIssuer class="hudson.security.csrf.DefaultCrumbIssuer">
+    <excludeClientIPFromCrumb>false</excludeClientIPFromCrumb>
+  </crumbIssuer>
+  <nodeProperties/>
+  <globalNodeProperties/>
+</hudson>
